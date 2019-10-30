@@ -1,0 +1,34 @@
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Hello Word!</title>
+</head>
+<body>
+    <div id="app">
+
+        <h4>1) v-if ile v-show</h4>
+        <!-- v-if ile datanın domda olup olmaması ile ilgileniyor. -->
+        <h2 v-if="isLoggedIn">{{ message }} {{ username}}</h2>
+        <h2 v-if="!isLoggedIn">Misafir Kullanıcı</h2>
+
+        <!-- v-show style özelliğinde sonucu göstermektedir. kaynak kodunda datayı görebiliriz. -->
+        <h2 v-show="isLoggedIn">{{ message }} {{ username}}</h2>
+        <h2 v-show="!isLoggedIn">Misafir Kullanıcı</h2>
+
+
+        <h4>2) Html etiketlerini kullanabilme ve text ile yazdırma</h4>
+        <p>v-html kullanımı:</p> 
+        <div v-html="messageforhtml"></div>
+        <p>v-text kullanımı:</p> 
+        <h1 v-text="messageforhtml"></h1>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>
